@@ -14,6 +14,7 @@ Transparent UART to UART Bridge using ESP8266.
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 ||UART||Wifi||Wifi||UART||
 |TX||RX||||RX||TX|
+|RX||TX||||TX||RX|
 
 # How to use   
 Edit Your SSID & Password.   
