@@ -7,6 +7,8 @@ Transparent UART to UART Bridge using ESP8266.
 |Microprocessor-1||Microprocessor-2|
 |:-:|:-:|:-:|
 ||UART||
+|TX||RX|
+|RX||TX|
 
 # After   
 
