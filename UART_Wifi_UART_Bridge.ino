@@ -25,7 +25,7 @@ char remoteHostName[16] = {0};
 void setup()
 {
   delay(1000);
-  Serial1.begin(115200);
+  Serial1.begin(115200); // for Debug print
   Serial.begin(115200); // You can change
 
   sprintf(myHostName, "ESP_%06X", ESP.getChipId());
