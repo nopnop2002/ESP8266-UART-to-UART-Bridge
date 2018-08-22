@@ -45,12 +45,12 @@ void setup()
   Udp.begin(localUdpPort);
   Serial1.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
 
-  // Start the mDNS responder for esp8266.local
+  // Start the mDNS responder for ESP_XXXXX.local
   if (!MDNS.begin(myHostName)) {
     Serial1.println("Error setting up MDNS responder!");
   }
   Serial1.println("mDNS responder started");
-  // Announce esp tcp service on port 8080
+  // Announce esp8266_wifi udp service on port 4210
   MDNS.addService("esp8266_wifi", "udp", localUdpPort);
 }
 
@@ -87,7 +87,7 @@ void loop()
     }
 
     if (validRemoteIp == 0) {
-      // Send out query for esp tcp services
+      // Send out query for esp8266_wifi udp services
       Serial1.println("Sending mDNS query");
       int n = MDNS.queryService("esp8266_wifi", "udp");
       Serial1.println("mDNS query done");
