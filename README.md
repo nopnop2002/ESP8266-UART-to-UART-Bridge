@@ -27,5 +27,5 @@ Flash sketch to ESP8266-1.
 Flash same sketch to ESP8266-2.   
 Connect Microprocessor-1 to ESP8266-1 via UART.   
 Connect Microprocessor-2 to ESP8266-2 via UART.   
-Send data from Microprocessor-1 to Microprocessor-2.   
-Responce data from Microprocessor-2 to Microprocessor-1.   
+Send data from Microprocessor-1 to ESP8266-1.   
+Receive data from ESP8266-2 to Microprocessor-2.   
