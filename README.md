@@ -20,7 +20,7 @@ Transparent UART to UART Bridge using ESP8266.
 |RX||TX||||RX||TX|
 |GND||GND||||GND||GND|
 
-![uart-bridge-1](https://user-images.githubusercontent.com/6020549/47716791-196bf000-dc87-11e8-94ad-6de45e3c207f.jpg)
+![image1](https://user-images.githubusercontent.com/6020549/51569293-45da8580-1edf-11e9-9606-17c2ff43674e.JPG)
 
 # How to use   
 Edit Your SSID & Password.   
@@ -43,3 +43,4 @@ https://github.com/martin-ger/esp_wifi_repeater
 |RX||TX||||RX||TX|
 |GND||GND||||GND||GND|
 
+![image2](https://user-images.githubusercontent.com/6020549/51569295-483cdf80-1edf-11e9-912b-94245c3f4ba7.JPG)
