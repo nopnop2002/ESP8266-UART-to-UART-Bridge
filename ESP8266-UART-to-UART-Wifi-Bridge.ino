@@ -19,20 +19,15 @@ uint8_t buf[bufferSize];
 uint8_t iofs=0;
 IPAddress remoteIp;
 unsigned int remotePort;
-char myHostName[16] = {0};
-char remoteHostName[16] = {0};
+char myDomainName[16] = {0};
+char remoteDomainName[16] = {0};
 
 void setup()
 {
   delay(1000);
   Serial1.begin(115200); // for Debug print
   Serial.begin(115200); // You can change
-
-  sprintf(myHostName, "ESP_%06X", ESP.getChipId());
-  Serial1.print("Hostname: ");
-  Serial1.println(myHostName);
-  WiFi.hostname(myHostName);
-
+ 
   Serial1.printf("Connecting to %s ", ssid);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED)
@@ -45,11 +40,19 @@ void setup()
   Udp.begin(localUdpPort);
   Serial1.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
 
-  // Start the mDNS responder for ESP_XXXXX.local
-  if (!MDNS.begin(myHostName)) {
+  sprintf(myDomainName, "ESP_%06X", ESP.getChipId());
+  Serial1.print("Hostname: ");
+  Serial1.println(myDomainName);
+  // Set up mDNS responder:
+  // - first argument is the domain name, in this example
+  //   the fully-qualified domain name is "esp8266.local"
+  // - second argument is the IP address to advertise
+  //   we send our IP address on the WiFi network
+  if (!MDNS.begin(myDomainName)) {
     Serial1.println("Error setting up MDNS responder!");
   }
   Serial1.println("mDNS responder started");
+
   // Announce esp8266_wifi udp service on port 4210
   MDNS.addService("esp8266_wifi", "udp", localUdpPort);
 }
@@ -58,6 +61,8 @@ void setup()
 void loop()
 {
   static int validRemoteIp = 0;
+
+  MDNS.update();
  
   int packetSize = Udp.parsePacket();
   if (packetSize)
@@ -107,8 +112,8 @@ void loop()
           Serial1.print(MDNS.port(i));
           Serial1.println(")");
     
-          MDNS.hostname(i).toCharArray(remoteHostName, sizeof(remoteHostName)); 
-          if (strcmp(remoteHostName, myHostName) != 0) {
+          MDNS.hostname(i).toCharArray(remoteDomainName, sizeof(remoteDomainName)); 
+          if (strcmp(remoteDomainName, myDomainName) != 0) {
             remoteIp = MDNS.IP(i);
             remotePort = MDNS.port(i);
             validRemoteIp = 1;
