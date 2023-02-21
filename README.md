@@ -13,9 +13,9 @@ Transparent UART to UART Bridge using ESP8266.
 
 # Using WiFi   
 
-|Microprocessor-1||ESP8266-1||WifiAP||ESP8266-2||Microprocessor-2|
+|Microprocessor-1||ESP8266-1||WiFi||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-||UART||Wifi||Wifi||UART||
+||UART||WiFi||WiFi||UART||
 |TX||RX||||TX||RX|
 |RX||TX||||RX||TX|
 |GND||GND||||GND||GND|
@@ -28,7 +28,7 @@ Transparent UART to UART Bridge using ESP8266.
 
 |Microprocessor-1||ESP8266-1||ESPNOW||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-||UART||Wifi||Wifi||UART||
+||UART||ESPNOW||ESPNOW||UART||
 |TX||RX||||TX||RX|
 |RX||TX||||RX||TX|
 |GND||GND||||GND||GND|
@@ -52,7 +52,7 @@ https://github.com/martin-ger/esp_wifi_repeater
 
 |Microprocessor-1||ESP8266-1||ESP8266-3(esp_wifi_repeater)||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-||UART||Wifi||Wifi||UART||
+||UART||WiFi||WiFi||UART||
 |TX||RX||||TX||RX|
 |RX||TX||||RX||TX|
 |GND||GND||||GND||GND|
