@@ -14,6 +14,7 @@ Transparent UART to UART Bridge using ESP8266.
 # Using WiFi   
 Many similar apps have been released, but they often use AP mode servers and STA mode clients.   
 In this case, it is necessary to start the AP mode server first.   
+If the STA mode client is started first, it will fail to connect to the AP.   
 This project runs both nodes in STA mode.   
 The IP address of the other side can be found using mDNS.   
 __Therefore, we don't need to worry about the boot order of ESP8266.__   
