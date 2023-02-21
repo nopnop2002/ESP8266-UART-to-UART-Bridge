@@ -80,14 +80,10 @@ void loop()
 
   if(Serial.available()) {
    
-    while(1) {
-      if(Serial.available()) {
-        buf[iofs] = (char)Serial.read(); // read char from UART
-        if(iofs<bufferSize-1) {
-          iofs++;
-        }
-      } else {
-        break;
+    while(Serial.available()) {
+      buf[iofs] = (char)Serial.read(); // read char from UART
+      if(iofs<bufferSize-1) {
+        iofs++;
       }
     }
 
