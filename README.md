@@ -16,7 +16,7 @@ Many similar apps have been released, but they often use AP mode servers and STA
 In this case, it is necessary to start the AP mode server first.   
 This project runs both nodes in STA mode.   
 The IP address of the other side can be found using mDNS.   
-Therefore, we don't need to worry about the boot order of ESP8266.   
+__Therefore, we don't need to worry about the boot order of ESP8266.__   
 |Microprocessor-1||ESP8266-1||ROUTER||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 ||UART||WiFi||WiFi||UART||
@@ -31,7 +31,7 @@ Therefore, we don't need to worry about the boot order of ESP8266.
 # Using ESPNOW   
 This project uses ESPNOW broadcast to find the MAC address of the other side.   
 There is no need to register the MAC address of the other side.   
-we don't need to worry about the boot order of ESP8266.   
+__We don't need to worry about the boot order of ESP8266.__   
 
 |Microprocessor-1||ESP8266-1||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
