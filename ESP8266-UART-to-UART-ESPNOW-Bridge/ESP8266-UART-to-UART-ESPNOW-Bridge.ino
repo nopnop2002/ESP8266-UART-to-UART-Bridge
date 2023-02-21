@@ -162,7 +162,6 @@ void loop() {
     incomingPacket = false;
   }
 
-  //delay(3000);
 }
 
 
