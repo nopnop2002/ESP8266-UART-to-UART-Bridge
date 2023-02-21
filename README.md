@@ -120,9 +120,10 @@ I used 1N5819 Schottky Barrier Plastic Rectifier.
 To start transmission, set the GPIO polarity to OUTPUT and the level to LOW.   
 
 ```
-pinMode(GPIO, OUTPUT);
-digitalWrite(GPIO, LOW);
-Serial.begin(115200);
+void setup() {
+	pinMode(GPIO, OUTPUT);
+	digitalWrite(GPIO, LOW);
+	Serial.begin(115200);
 ```
 
 NOTE:GPIO15 is pulled down and cannot be used for this.   
