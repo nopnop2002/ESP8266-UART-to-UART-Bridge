@@ -29,8 +29,8 @@ Transparent UART to UART Bridge using ESP8266.
 |Microprocessor-1||ESP8266-1||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 ||UART||ESPNOW||UART||
-|TX||RX||X||RX|
-|RX||TX||X||TX|
+|TX||RX||TX||RX|
+|RX||TX||RX||TX|
 |GND||GND||GND||GND|
 
 ![slide3](https://user-images.githubusercontent.com/6020549/220303392-85d6e234-8dc1-48c5-b0ba-ab3978840c12.JPG)
