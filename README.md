@@ -13,7 +13,7 @@ Transparent UART to UART Bridge using ESP8266.
 
 # Using WiFi   
 
-|Microprocessor-1||ESP8266-1||WiFi||ESP8266-2||Microprocessor-2|
+|Microprocessor-1||ESP8266-1||ROUTER||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 ||UART||WiFi||WiFi||UART||
 |TX||RX||||TX||RX|
@@ -26,9 +26,9 @@ Transparent UART to UART Bridge using ESP8266.
 
 # Using ESPNOW   
 
-|Microprocessor-1||ESP8266-1||ESPNOW||ESP8266-2||Microprocessor-2|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-||UART||ESPNOW||ESPNOW||UART||
+|Microprocessor-1||ESP8266-1||ESP8266-2||Microprocessor-2|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+||UART||ESPNOW||UART||
 |TX||RX||||TX||RX|
 |RX||TX||||RX||TX|
 |GND||GND||||GND||GND|
