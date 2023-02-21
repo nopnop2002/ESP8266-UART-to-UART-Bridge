@@ -112,7 +112,7 @@ However, since GPIO15 is a pin that determines the boot mode, ESP8266 does not s
 __This method cannot be used.__   
 
 ### Add a circuit
-If the following circuit is added, All message does not reach RX port of other side.   
+If the following circuit is added, All messages does not reach RX port of the other side.   
 I used 1N5819 Schottky Barrier Plastic Rectifier.   
 
 ![UART_BOOT_MESSAGE](https://user-images.githubusercontent.com/6020549/74654209-28084e80-51cd-11ea-8af5-d0c03551a484.jpg)
