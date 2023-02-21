@@ -12,9 +12,11 @@ Transparent UART to UART Bridge using ESP8266.
 |GND||GND|
 
 # Using WiFi   
+Many similar apps have been released, but they often use AP mode servers and STA mode clients.   
+In this case, it is necessary to start the AP mode server first.   
 This project runs both nodes in STA mode.   
 The IP address of the other side can be found using mDNS.   
-
+Therefore, we don't need to worry about the boot order of ESP8266.   
 |Microprocessor-1||ESP8266-1||ROUTER||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 ||UART||WiFi||WiFi||UART||
