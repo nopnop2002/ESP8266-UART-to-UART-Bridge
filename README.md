@@ -12,6 +12,8 @@ Transparent UART to UART Bridge using ESP8266.
 |GND||GND|
 
 # Using WiFi   
+This project runs both nodes in STA mode.   
+The IP address of the other side can be found using mDNS.   
 
 |Microprocessor-1||ESP8266-1||ROUTER||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -25,6 +27,7 @@ Transparent UART to UART Bridge using ESP8266.
 
 
 # Using ESPNOW   
+This project uses ESPNOW broadcast to find the MAC address of the other side.   
 
 |Microprocessor-1||ESP8266-1||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
