@@ -31,6 +31,7 @@ Therefore, we don't need to worry about the boot order of ESP8266.
 # Using ESPNOW   
 This project uses ESPNOW broadcast to find the MAC address of the other side.   
 There is no need to register the MAC address of the other side.   
+we don't need to worry about the boot order of ESP8266.   
 
 |Microprocessor-1||ESP8266-1||ESP8266-2||Microprocessor-2|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
