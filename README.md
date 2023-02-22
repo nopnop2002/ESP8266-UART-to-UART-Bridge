@@ -54,7 +54,8 @@ Connect Microprocessor-2 to ESP8266-2 via UART.
 Send data from Microprocessor-1 to ESP8266-1.   
 Receive data from ESP8266-2 to Microprocessor-2.   
 
-You can use ESP8266 as WiFi router.   
+
+You can use ESP8266 as a __dedicated__ WiFi router.   
 esp_wifi_repeater   
 https://github.com/martin-ger/esp_wifi_repeater   
 
