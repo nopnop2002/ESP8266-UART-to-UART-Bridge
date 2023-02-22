@@ -101,16 +101,15 @@ csum 0x46
 ### Swap UART
 UART can be swapped by adding the following one line:
 ```
-Serial.swap();   
+void setup() {
+	Serial.swap();   
 ```
 TX / RX changes to the following when UART is swapped.
 ```
 GPIO15(TXD)   --- RX
 GPIO13(RXD)   --- TX
 ```
-The boot message does not reach RX port of other side.   
-However, since GPIO15 is the pin that determines the boot mode, the ESP8266 may not start.   
-__This method is not recommended.__   
+It doesn't help because the boot messages appear before the main module starts.   
 
 ### Add a circuit
 If the following circuit is added, All messages does not reach RX port of the other side.   
